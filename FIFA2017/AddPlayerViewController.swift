@@ -29,6 +29,7 @@ class AddPlayerViewController: UIViewController, UITextFieldDelegate{
         // UITextFieldの作成
         playerTextField = UITextField(frame: CGRect(x: textPosX, y: 100, width: 200, height: 30))
         playerTextField.text = ""
+        playerTextField.placeholder = "Player name"
         playerTextField.delegate = self
         playerTextField.borderStyle = .roundedRect
         playerTextField.clearButtonMode = .whileEditing

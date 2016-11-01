@@ -66,6 +66,10 @@ class PlayerViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Num: \(indexPath.row)")
         print("Value: \(players[indexPath.row].name)")
+        playerIndex = indexPath.row
+        // 遷移するViewを定義する.
+        let mySecondViewController: UIViewController = EachPlayerViewController()
+        self.navigationController?.pushViewController(mySecondViewController, animated: true)
     }
 
     //Cellの総数を返す.

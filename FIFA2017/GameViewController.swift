@@ -42,13 +42,17 @@ class GameViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         let displayWidth: CGFloat = self.view.frame.width
         let displayHeight: CGFloat = self.view.frame.height
         
-        // playerTableViewの生成
+        // gameTableViewの生成
         gameTableView = UITableView(frame: CGRect(x: 0, y: 0, width: displayWidth, height: displayHeight))
         gameTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
         gameTableView.dataSource = self
         gameTableView.delegate = self
         self.view.addSubview(gameTableView)
-
+        
+        //tableの更新
+        try! realmTry.write {
+            games = realmTry.objects(realmGame.self).sorted(byProperty: "date", ascending: false)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,10 +61,25 @@ class GameViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     //Game Addボタンのイベント.
     internal func onClickAddButton(sender: UIButton) {
-        // 遷移するViewを定義する.
-        let mySecondViewController: UIViewController = AddGameViewController()
-        self.navigationController?.pushViewController(mySecondViewController, animated: true)
+        if players.count != 0 && teams.count != 0 {
+            // 遷移するViewを定義する.
+            let mySecondViewController: UIViewController = AddGameViewController()
+            self.navigationController?.pushViewController(mySecondViewController, animated: true)
+        } else {
+            // UIAlertControllerを作成する.
+            let myAlert: UIAlertController = UIAlertController(title: "ERROR", message: "Add Player or Team", preferredStyle: .alert)
+            
+            // OKのアクションを作成する.
+            let myOkAction = UIAlertAction(title: "OK", style: .default) { action in }
+            
+            // OKのActionを追加する.
+            myAlert.addAction(myOkAction)
+            
+            // UIAlertを発動する.
+            present(myAlert, animated: true, completion: nil)
+        }
     }
+
     
     
     //Cellが選択された際に呼び出される.
@@ -77,10 +96,12 @@ class GameViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     //Cellに値を設定する.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: .subtitle, reuseIdentifier: "myCell")
-        let p1name = UILabel(frame: CGRect(x: 0, y: 0, width: (myBoundSize.width-50)/2, height: 55))
+        let p1name = UILabel(frame: CGRect(x: 0, y: 0, width: (myBoundSize.width-50)/2, height: 35))
+        let p1team = UILabel(frame: CGRect(x: 0, y: 35, width: (myBoundSize.width-50)/2, height: 15))
         let p1score = UILabel(frame: CGRect(x: (myBoundSize.width-50)/2, y: 0, width: 15, height: 30))
         let p2score = UILabel(frame: CGRect(x: (myBoundSize.width-50)/2+35, y: 0, width: 15, height: 30))
-        let p2name = UILabel(frame: CGRect(x: (myBoundSize.width-50)/2+50, y: 0, width: (myBoundSize.width-50)/2, height: 55))
+        let p2name = UILabel(frame: CGRect(x: (myBoundSize.width-50)/2+50, y: 0, width: (myBoundSize.width-50)/2, height: 35))
+        let p2team = UILabel(frame: CGRect(x: (myBoundSize.width-50)/2+50, y: 35, width: (myBoundSize.width-50)/2, height: 15))
         let title = UILabel(frame: CGRect(x: (myBoundSize.width - 20)/2, y: 0, width: 20, height: 30))
         let subtitle = UILabel(frame: CGRect(x: 0, y: 30, width: myBoundSize.width, height: 20))
 
@@ -89,10 +110,20 @@ class GameViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         p1name.font = UIFont.systemFont(ofSize: CGFloat(25))
         cell.addSubview(p1name)
         
+        p1team.text = "\(games[indexPath.row].p1team)"
+        p1team.textAlignment = NSTextAlignment.center
+        p1team.font = UIFont.systemFont(ofSize: CGFloat(10))
+        cell.addSubview(p1team)
+        
         p2name.text = "\(games[indexPath.row].player2)"
         p2name.textAlignment = NSTextAlignment.center
         p2name.font = UIFont.systemFont(ofSize: CGFloat(25))
         cell.addSubview(p2name)
+        
+        p2team.text = "\(games[indexPath.row].p2team)"
+        p2team.textAlignment = NSTextAlignment.center
+        p2team.font = UIFont.systemFont(ofSize: CGFloat(10))
+        cell.addSubview(p2team)
         
         if games[indexPath.row].p1score > games[indexPath.row].p2score {
             p1score.textColor = UIColor.red
@@ -142,8 +173,8 @@ class GameViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             let p2name = games[indexPath.row].player2
             let p1score = games[indexPath.row].p1score
             let p2score = games[indexPath.row].p2score
-            let p1 = realmTry.objects(realmPlayer).filter("name==%@",p1name).first
-            let p2 = realmTry.objects(realmPlayer).filter("name==%@",p2name).first
+            let p1 = realmTry.objects(realmPlayer.self).filter("name==%@",p1name).first
+            let p2 = realmTry.objects(realmPlayer.self).filter("name==%@",p2name).first
             
             //realmファイルを開く
             try!realmTry.write {

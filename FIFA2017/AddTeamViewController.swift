@@ -12,16 +12,23 @@ import RealmSwift
 class AddTeamViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource{
     private var teamTextField: UITextField!
     private var teamAddButton: UIButton!
-    private var rValues: [Int] = [0,1,2,3,4,5,6,7,8,9,10]
+    private var rValues: [Int] = [10,9,8,7,6,5,4,3,2,1]
     private var rankPicker: UIPickerView!
     private var leaguePicker: UIPickerView!
     private var selectedRank: Int = 0
-    private var selectedLeague: String = leagues[0] as! String
-
+    private var lValues: NSArray! = []
+    private var selectedLeague :String!
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Add Team"
+        
+        // league name picker の値設定
+        for league in leagues {
+            lValues = lValues.adding(league.name) as NSArray!
+        }
+        selectedLeague = String(describing:lValues[0])
         
         // Viewの背景色をwhiteに設定する.
         self.view.backgroundColor = UIColor.white
@@ -32,6 +39,7 @@ class AddTeamViewController: UIViewController, UITextFieldDelegate, UIPickerView
         // UITextFieldの作成
         teamTextField = UITextField(frame: CGRect(x: myBoundSize.width/2-100, y: barHeight+70, width: 200, height: 30))
         teamTextField.text = ""
+        teamTextField.placeholder = "Team name"
         teamTextField.delegate = self
         teamTextField.borderStyle = .roundedRect
         teamTextField.clearButtonMode = .whileEditing
@@ -40,7 +48,7 @@ class AddTeamViewController: UIViewController, UITextFieldDelegate, UIPickerView
         
         //addボタンを作成する
         teamAddButton = UIButton()
-        teamAddButton.frame = CGRect(x: (myBoundSize.width-50)/2, y: 500, width: 50, height: 30)
+        teamAddButton.frame = CGRect(x: (myBoundSize.width-50)/2, y: 450, width: 50, height: 30)
         teamAddButton.setTitle("Add", for: .normal)
         teamAddButton.setTitleColor(UIColor.blue, for: .normal)
         teamAddButton.setTitleColor(UIColor.black, for: .highlighted)
@@ -69,6 +77,14 @@ class AddTeamViewController: UIViewController, UITextFieldDelegate, UIPickerView
         super.didReceiveMemoryWarning()
     }
     
+    //テキストの改行が押されたとき
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        
+        return true
+    }
     
     //Team Addボタンのイベント.
     internal func onClickAddButton(sender: UIButton) {
@@ -103,7 +119,7 @@ class AddTeamViewController: UIViewController, UITextFieldDelegate, UIPickerView
         if pickerView.tag==1{
             return String(rValues[row])
         }else if pickerView.tag==2{
-            return String(describing: leagues[row])
+            return lValues[row] as? String
         }
         return String(describing: leagues[row])
     }
@@ -114,7 +130,7 @@ class AddTeamViewController: UIViewController, UITextFieldDelegate, UIPickerView
         if pickerView.tag==1{
             selectedRank = rValues[row]
         }else if pickerView.tag==2{
-            selectedLeague = String(describing: leagues[row])
+            selectedLeague = String(describing: leagues[row].name)
         }
     }
 

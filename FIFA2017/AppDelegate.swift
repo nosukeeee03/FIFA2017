@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let myFirstNavigationController = UINavigationController(rootViewController: myFirstTab)
         let mySecondTab: UIViewController = GameViewController()
         let mySecondNavigationController = UINavigationController(rootViewController: mySecondTab)
-        let myTabs = NSArray(objects: myFirstNavigationController, mySecondNavigationController)
+        let myThirdTab: UIViewController = SettingViewController()
+        let myThirdNavigationController = UINavigationController(rootViewController: myThirdTab)
+        let myTabs = NSArray(objects: myFirstNavigationController, mySecondNavigationController,myThirdNavigationController)
         let myTabBarController: UITabBarController = UITabBarController()
         myTabBarController.setViewControllers(myTabs as? [UIViewController], animated: false)
         self.window!.rootViewController = myTabBarController

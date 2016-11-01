@@ -10,8 +10,6 @@
 		36397F461DA4138C00E5E0A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36397F451DA4138C00E5E0A1 /* AppDelegate.swift */; };
 		36397F4B1DA4138C00E5E0A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36397F491DA4138C00E5E0A1 /* Main.storyboard */; };
 		36397F4E1DA4138C00E5E0A1 /* FIFA2017.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36397F4C1DA4138C00E5E0A1 /* FIFA2017.xcdatamodeld */; };
-		36397F501DA4138C00E5E0A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36397F4F1DA4138C00E5E0A1 /* Assets.xcassets */; };
-		36397F531DA4138C00E5E0A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36397F511DA4138C00E5E0A1 /* LaunchScreen.storyboard */; };
 		36397F5B1DA4139F00E5E0A1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36397F5A1DA4139F00E5E0A1 /* Realm.framework */; };
 		36397F5C1DA4139F00E5E0A1 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 36397F5A1DA4139F00E5E0A1 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		36397F5F1DA413AA00E5E0A1 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36397F5E1DA413AA00E5E0A1 /* RealmSwift.framework */; };
@@ -24,6 +22,24 @@
 		36397F6C1DA4C24E00E5E0A1 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36397F6B1DA4C24E00E5E0A1 /* AddPlayerViewController.swift */; };
 		36397F6E1DA5933D00E5E0A1 /* AddGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36397F6D1DA5933D00E5E0A1 /* AddGameViewController.swift */; };
 		36397F701DA95FED00E5E0A1 /* AddTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36397F6F1DA95FED00E5E0A1 /* AddTeamViewController.swift */; };
+		36397F721DAE71B700E5E0A1 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36397F711DAE71B700E5E0A1 /* SettingViewController.swift */; };
+		36397F741DAE729400E5E0A1 /* spanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 36397F731DAE729400E5E0A1 /* spanner.png */; };
+		36397F761DAE86F000E5E0A1 /* shirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 36397F751DAE86F000E5E0A1 /* shirt.png */; };
+		36397F781DB4ACF300E5E0A1 /* opening.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 36397F771DB4ACF300E5E0A1 /* opening.JPG */; };
+		36397F7A1DB4AFC500E5E0A1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36397F791DB4AFC500E5E0A1 /* Media.xcassets */; };
+		36397F7C1DB4AFEA00E5E0A1 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36397F7B1DB4AFEA00E5E0A1 /* Launch Screen.storyboard */; };
+		36397F821DB4B82A00E5E0A1 /* 60x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 36397F811DB4B82A00E5E0A1 /* 60x2.png */; };
+		36397F851DB4B89300E5E0A1 /* 60x3.png in Resources */ = {isa = PBXBuildFile; fileRef = 36397F841DB4B89300E5E0A1 /* 60x3.png */; };
+		36397F871DB4B91500E5E0A1 /* 57x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 36397F861DB4B91500E5E0A1 /* 57x1.png */; };
+		36397F891DB4B93F00E5E0A1 /* 57x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 36397F881DB4B93F00E5E0A1 /* 57x2.png */; };
+		36397F8B1DB4B96600E5E0A1 /* 40x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 36397F8A1DB4B96600E5E0A1 /* 40x2.png */; };
+		36397F8D1DB4B9E500E5E0A1 /* 29x1.png in Resources */ = {isa = PBXBuildFile; fileRef = 36397F8C1DB4B9E500E5E0A1 /* 29x1.png */; };
+		36397F8F1DB4BA0E00E5E0A1 /* 29x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 36397F8E1DB4BA0E00E5E0A1 /* 29x2.png */; };
+		36397F911DB4BA3E00E5E0A1 /* 29x3.png in Resources */ = {isa = PBXBuildFile; fileRef = 36397F901DB4BA3E00E5E0A1 /* 29x3.png */; };
+		36397F931DB4BAA300E5E0A1 /* 20x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 36397F921DB4BAA300E5E0A1 /* 20x2.png */; };
+		36397F951DB4BAC100E5E0A1 /* 20x3.png in Resources */ = {isa = PBXBuildFile; fileRef = 36397F941DB4BAC100E5E0A1 /* 20x3.png */; };
+		36397F971DB88BE300E5E0A1 /* AddLeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36397F961DB88BE300E5E0A1 /* AddLeagueViewController.swift */; };
+		36397F991DB8C19100E5E0A1 /* EachPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36397F981DB8C19100E5E0A1 /* EachPlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,8 +62,6 @@
 		36397F451DA4138C00E5E0A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36397F4A1DA4138C00E5E0A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36397F4D1DA4138C00E5E0A1 /* FIFA2017.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FIFA2017.xcdatamodel; sourceTree = "<group>"; };
-		36397F4F1DA4138C00E5E0A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		36397F521DA4138C00E5E0A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36397F541DA4138C00E5E0A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36397F5A1DA4139F00E5E0A1 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		36397F5E1DA413AA00E5E0A1 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
@@ -59,6 +73,24 @@
 		36397F6B1DA4C24E00E5E0A1 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
 		36397F6D1DA5933D00E5E0A1 /* AddGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGameViewController.swift; sourceTree = "<group>"; };
 		36397F6F1DA95FED00E5E0A1 /* AddTeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTeamViewController.swift; sourceTree = "<group>"; };
+		36397F711DAE71B700E5E0A1 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		36397F731DAE729400E5E0A1 /* spanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spanner.png; sourceTree = "<group>"; };
+		36397F751DAE86F000E5E0A1 /* shirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shirt.png; sourceTree = "<group>"; };
+		36397F771DB4ACF300E5E0A1 /* opening.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opening.JPG; sourceTree = "<group>"; };
+		36397F791DB4AFC500E5E0A1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		36397F7B1DB4AFEA00E5E0A1 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		36397F811DB4B82A00E5E0A1 /* 60x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 60x2.png; sourceTree = "<group>"; };
+		36397F841DB4B89300E5E0A1 /* 60x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 60x3.png; sourceTree = "<group>"; };
+		36397F861DB4B91500E5E0A1 /* 57x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57x1.png; sourceTree = "<group>"; };
+		36397F881DB4B93F00E5E0A1 /* 57x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57x2.png; sourceTree = "<group>"; };
+		36397F8A1DB4B96600E5E0A1 /* 40x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 40x2.png; sourceTree = "<group>"; };
+		36397F8C1DB4B9E500E5E0A1 /* 29x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 29x1.png; sourceTree = "<group>"; };
+		36397F8E1DB4BA0E00E5E0A1 /* 29x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 29x2.png; sourceTree = "<group>"; };
+		36397F901DB4BA3E00E5E0A1 /* 29x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 29x3.png; sourceTree = "<group>"; };
+		36397F921DB4BAA300E5E0A1 /* 20x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20x2.png; sourceTree = "<group>"; };
+		36397F941DB4BAC100E5E0A1 /* 20x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20x3.png; sourceTree = "<group>"; };
+		36397F961DB88BE300E5E0A1 /* AddLeagueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLeagueViewController.swift; sourceTree = "<group>"; };
+		36397F981DB8C19100E5E0A1 /* EachPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EachPlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,22 +127,46 @@
 		36397F441DA4138C00E5E0A1 /* FIFA2017 */ = {
 			isa = PBXGroup;
 			children = (
+				36397F831DB4B86000E5E0A1 /* icon */,
+				36397F771DB4ACF300E5E0A1 /* opening.JPG */,
 				36397F671DA4BA8700E5E0A1 /* user.png */,
 				36397F681DA4BA8700E5E0A1 /* football.png */,
+				36397F731DAE729400E5E0A1 /* spanner.png */,
+				36397F751DAE86F000E5E0A1 /* shirt.png */,
 				36397F451DA4138C00E5E0A1 /* AppDelegate.swift */,
 				36397F611DA4B87600E5E0A1 /* DataType.swift */,
+				36397F631DA4B90800E5E0A1 /* PlayerViewController.swift */,
+				36397F981DB8C19100E5E0A1 /* EachPlayerViewController.swift */,
+				36397F6B1DA4C24E00E5E0A1 /* AddPlayerViewController.swift */,
 				36397F651DA4B91900E5E0A1 /* GameViewController.swift */,
 				36397F6D1DA5933D00E5E0A1 /* AddGameViewController.swift */,
+				36397F711DAE71B700E5E0A1 /* SettingViewController.swift */,
 				36397F6F1DA95FED00E5E0A1 /* AddTeamViewController.swift */,
-				36397F631DA4B90800E5E0A1 /* PlayerViewController.swift */,
-				36397F6B1DA4C24E00E5E0A1 /* AddPlayerViewController.swift */,
+				36397F961DB88BE300E5E0A1 /* AddLeagueViewController.swift */,
+				36397F791DB4AFC500E5E0A1 /* Media.xcassets */,
 				36397F491DA4138C00E5E0A1 /* Main.storyboard */,
-				36397F4F1DA4138C00E5E0A1 /* Assets.xcassets */,
-				36397F511DA4138C00E5E0A1 /* LaunchScreen.storyboard */,
+				36397F7B1DB4AFEA00E5E0A1 /* Launch Screen.storyboard */,
 				36397F541DA4138C00E5E0A1 /* Info.plist */,
 				36397F4C1DA4138C00E5E0A1 /* FIFA2017.xcdatamodeld */,
 			);
 			path = FIFA2017;
+			sourceTree = "<group>";
+		};
+		36397F831DB4B86000E5E0A1 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				36397F941DB4BAC100E5E0A1 /* 20x3.png */,
+				36397F921DB4BAA300E5E0A1 /* 20x2.png */,
+				36397F901DB4BA3E00E5E0A1 /* 29x3.png */,
+				36397F8E1DB4BA0E00E5E0A1 /* 29x2.png */,
+				36397F8C1DB4B9E500E5E0A1 /* 29x1.png */,
+				36397F8A1DB4B96600E5E0A1 /* 40x2.png */,
+				36397F881DB4B93F00E5E0A1 /* 57x2.png */,
+				36397F861DB4B91500E5E0A1 /* 57x1.png */,
+				36397F841DB4B89300E5E0A1 /* 60x3.png */,
+				36397F811DB4B82A00E5E0A1 /* 60x2.png */,
+			);
+			name = icon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +202,7 @@
 				TargetAttributes = {
 					36397F411DA4138C00E5E0A1 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = VSJUJ39ZEL;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -173,11 +230,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36397F951DB4BAC100E5E0A1 /* 20x3.png in Resources */,
+				36397F911DB4BA3E00E5E0A1 /* 29x3.png in Resources */,
 				36397F6A1DA4BA8700E5E0A1 /* football.png in Resources */,
-				36397F531DA4138C00E5E0A1 /* LaunchScreen.storyboard in Resources */,
-				36397F501DA4138C00E5E0A1 /* Assets.xcassets in Resources */,
+				36397F821DB4B82A00E5E0A1 /* 60x2.png in Resources */,
+				36397F7A1DB4AFC500E5E0A1 /* Media.xcassets in Resources */,
+				36397F7C1DB4AFEA00E5E0A1 /* Launch Screen.storyboard in Resources */,
+				36397F761DAE86F000E5E0A1 /* shirt.png in Resources */,
+				36397F8D1DB4B9E500E5E0A1 /* 29x1.png in Resources */,
 				36397F691DA4BA8700E5E0A1 /* user.png in Resources */,
+				36397F931DB4BAA300E5E0A1 /* 20x2.png in Resources */,
+				36397F8B1DB4B96600E5E0A1 /* 40x2.png in Resources */,
 				36397F4B1DA4138C00E5E0A1 /* Main.storyboard in Resources */,
+				36397F851DB4B89300E5E0A1 /* 60x3.png in Resources */,
+				36397F891DB4B93F00E5E0A1 /* 57x2.png in Resources */,
+				36397F871DB4B91500E5E0A1 /* 57x1.png in Resources */,
+				36397F8F1DB4BA0E00E5E0A1 /* 29x2.png in Resources */,
+				36397F781DB4ACF300E5E0A1 /* opening.JPG in Resources */,
+				36397F741DAE729400E5E0A1 /* spanner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,10 +259,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				36397F6E1DA5933D00E5E0A1 /* AddGameViewController.swift in Sources */,
+				36397F971DB88BE300E5E0A1 /* AddLeagueViewController.swift in Sources */,
 				36397F6C1DA4C24E00E5E0A1 /* AddPlayerViewController.swift in Sources */,
 				36397F621DA4B87600E5E0A1 /* DataType.swift in Sources */,
 				36397F4E1DA4138C00E5E0A1 /* FIFA2017.xcdatamodeld in Sources */,
+				36397F991DB8C19100E5E0A1 /* EachPlayerViewController.swift in Sources */,
 				36397F461DA4138C00E5E0A1 /* AppDelegate.swift in Sources */,
+				36397F721DAE71B700E5E0A1 /* SettingViewController.swift in Sources */,
 				36397F701DA95FED00E5E0A1 /* AddTeamViewController.swift in Sources */,
 				36397F661DA4B91900E5E0A1 /* GameViewController.swift in Sources */,
 				36397F641DA4B90800E5E0A1 /* PlayerViewController.swift in Sources */,
@@ -208,14 +281,6 @@
 				36397F4A1DA4138C00E5E0A1 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		36397F511DA4138C00E5E0A1 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				36397F521DA4138C00E5E0A1 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -318,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VSJUJ39ZEL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -334,6 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VSJUJ39ZEL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
